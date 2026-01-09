@@ -1,1 +1,31 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.form-panel {
+  width: 35%;
+  background: #fff;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #0066ff;
+  color: #fff;
+  border: none;
+}
+
+.preview {
+  width: 65%;
+  border: none;
+}
 
