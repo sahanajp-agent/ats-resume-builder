@@ -10,24 +10,43 @@
 
 <div class="container">
   <div class="form-panel">
-    <h2>Resume Content</h2>
+  <h2>Resume Content</h2>
 
-    <label>Full Name</label>
-    <input id="name" placeholder="Enter your full name">
+  <label>Full Name</label>
+  <input id="name">
 
-    <label>Email</label>
-    <input id="email" placeholder="email@example.com">
+  <label>Email</label>
+  <input id="email">
 
-    <label>Phone</label>
-    <input id="phone" placeholder="+91 XXXXXXXX">
+  <label>Phone</label>
+  <input id="phone">
 
-    <label>Summary</label>
-    <textarea id="summary"></textarea>
+  <label>Summary</label>
+  <textarea id="summary"></textarea>
 
-    <button onclick="saveResume()">Preview Resume</button>
-    <button class="clear-btn" onclick="clearResume()">
-  Clear Resume
-</button>
+  <label>Skills (comma separated)</label>
+  <textarea id="skills"></textarea>
+
+  <label>Work Experience</label>
+  <textarea id="experience"
+    placeholder="Job Title – Company
+• Responsibility 1
+• Responsibility 2"></textarea>
+
+  <label>Projects</label>
+  <textarea id="projects"
+    placeholder="Project Name – Description"></textarea>
+
+  <label>Education</label>
+  <textarea id="education"></textarea>
+
+  <label>Certifications</label>
+  <textarea id="certifications"></textarea>
+
+  <button onclick="saveResume()">Preview Resume</button>
+  <button onclick="clearResume()">Clear Resume</button>
+</div>
+
 
   </div>
   
