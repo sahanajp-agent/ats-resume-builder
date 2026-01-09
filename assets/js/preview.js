@@ -16,6 +16,7 @@ setText("r-projects", data.projects);
 setText("r-education", data.education);
 setText("r-certifications", data.certifications);
 
-function goToEdit() {
-  window.location.href = "../form/resume-form.html";
+function editSection(section) {
+  window.location.href = `../form/resume-form.html?section=${section}`;
 }
+
