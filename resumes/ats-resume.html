@@ -9,52 +9,69 @@
 
 <div class="resume" id="resumeContent">
 
-  <h1 id="r-name"></h1>
   <p id="r-contact"></p>
-  <section>
-  <h2>
-    SUMMARY
-    
-  </h2>
-  <p id="r-summary"></p>
-</section>
 
+  <!-- SUMMARY -->
+  <section>
+    <h2>
+      SUMMARY
+      <button onclick="enableEdit('summary')">Edit</button>
+    </h2>
+    <p id="r-summary" data-key="summary"></p>
   </section>
 
+  <!-- SKILLS -->
   <section>
-    <h2>SKILLS <button onclick="editLeftSection('skills')">Edit</button></h2>
-    <p id="r-skills"></p>
+    <h2>
+      SKILLS
+      <button onclick="enableEdit('skills')">Edit</button>
+    </h2>
+    <p id="r-skills" data-key="skills"></p>
   </section>
 
+  <!-- EXPERIENCE -->
   <section>
-    <h2>WORK EXPERIENCE <button onclick="editLeftSection('experience')">Edit</button></h2>
-    <pre id="r-experience"></pre>
+    <h2>
+      WORK EXPERIENCE
+      <button onclick="enableEdit('experience')">Edit</button>
+    </h2>
+    <pre id="r-experience" data-key="experience"></pre>
   </section>
 
+  <!-- PROJECTS -->
   <section>
-    <h2>PROJECTS <button onclick="editLeftSection('projects')">Edit</button></h2>
-    <pre id="r-projects"></pre>
+    <h2>
+      PROJECTS
+      <button onclick="enableEdit('projects')">Edit</button>
+    </h2>
+    <pre id="r-projects" data-key="projects"></pre>
   </section>
 
+  <!-- EDUCATION -->
   <section>
-    <h2>EDUCATION <button onclick="editLeftSection('education')">Edit</button></h2>
-    <p id="r-education"></p>
+    <h2>
+      EDUCATION
+      <button onclick="enableEdit('education')">Edit</button>
+    </h2>
+    <p id="r-education" data-key="education"></p>
   </section>
 
+  <!-- CERTIFICATIONS -->
   <section>
-    <h2>CERTIFICATIONS <button onclick="editLeftSection('certifications')">Edit</button></h2>
-    <p id="r-certifications"></p>
+    <h2>
+      CERTIFICATIONS
+      <button onclick="enableEdit('certifications')">Edit</button>
+    </h2>
+    <p id="r-certifications" data-key="certifications"></p>
   </section>
 
 </div>
 
 <div class="actions">
-  <button onclick="goToEdit()">✏️ Edit</button>
   <button onclick="downloadPDF()">⬇️ Download PDF</button>
 </div>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 <script src="../assets/js/preview.js"></script>
 </body>
 </html>
-
