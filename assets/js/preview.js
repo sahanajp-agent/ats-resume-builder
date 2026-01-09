@@ -1,13 +1,16 @@
-const data = JSON.parse(localStorage.getItem("resumeData"));
+const data = JSON.parse(localStorage.getItem("resumeData")) || {};
 
-if (!data) {
-  document.getElementById("r-name").innerText = "";
-  document.getElementById("r-contact").innerText = "";
-  document.getElementById("r-summary").innerText = "";
-} else {
-  document.getElementById("r-name").innerText = data.name || "";
-  document.getElementById("r-contact").innerText =
-    `${data.email || ""} ${data.phone || ""}`;
-  document.getElementById("r-summary").innerText = data.summary || "";
+document.getElementById("r-name").innerText = data.name || "";
+document.getElementById("r-contact").innerText =
+  `${data.email || ""} | ${data.phone || ""}`;
+
+document.getElementById("r-summary").innerText = data.summary || "";
+document.getElementById("r-skills").innerText = data.skills || "";
+document.getElementById("r-experience").innerText = data.experience || "";
+document.getElementById("r-projects").innerText = data.projects || "";
+document.getElementById("r-education").innerText = data.education || "";
+document.getElementById("r-certifications").innerText = data.certifications || "";
+
+function goToEdit() {
+  window.location.href = "../form/resume-form.html";
 }
-
