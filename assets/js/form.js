@@ -1,31 +1,23 @@
 function saveResume() {
-  const data = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    phone: document.getElementById("phone").value,
-    summary: document.getElementById("summary").value
+  const resumeData = {
+    name: name.value,
+    email: email.value,
+    phone: phone.value,
+    summary: summary.value,
+    skills: skills.value,
+    experience: experience.value,
+    projects: projects.value,
+    education: education.value,
+    certifications: certifications.value
   };
 
-  localStorage.setItem("resumeData", JSON.stringify(data));
-  // Reload iframe to reflect changes
-  const iframe = document.getElementById("resumePreview");
-  iframe.src = iframe.src;
+  localStorage.setItem("resumeData", JSON.stringify(resumeData));
 
-  alert("Resume data saved & preview updated!");
-
+  document.getElementById("resumePreview").src =
+    document.getElementById("resumePreview").src;
 }
+
 function clearResume() {
-  // Remove saved resume
   localStorage.removeItem("resumeData");
-
-  // Clear form inputs
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("phone").value = "";
-  document.getElementById("summary").value = "";
-
-  // Reload preview
-  const iframe = document.getElementById("resumePreview");
-  iframe.src = iframe.src;
+  location.reload();
 }
-
