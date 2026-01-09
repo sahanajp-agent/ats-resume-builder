@@ -9,57 +9,55 @@
 <body>
 
 <div class="container">
+
+  <!-- LEFT PANEL -->
   <div class="form-panel">
-  <h2>Resume Content</h2>
+    <h2>Resume Content</h2>
 
-  <label>Full Name</label>
-  <input id="name">
+    <label>Full Name</label>
+    <input id="name">
 
-  <label>Email</label>
-  <input id="email">
+    <label>Email</label>
+    <input id="email">
 
-  <label>Phone</label>
-  <input id="phone">
+    <label>Phone</label>
+    <input id="phone">
 
-  <label>Summary</label>
-  <textarea id="summary"></textarea>
+    <label>Summary</label>
+    <textarea id="summary"></textarea>
 
-  <label>Skills (comma separated)</label>
-  <textarea id="skills"></textarea>
+    <label>Skills (comma separated)</label>
+    <textarea id="skills"></textarea>
 
-  <label>Work Experience</label>
-  <textarea id="experience"
-    placeholder="Job Title – Company
+    <label>Work Experience</label>
+    <textarea id="experience"
+      placeholder="Job Title – Company
 • Responsibility 1
 • Responsibility 2"></textarea>
 
-  <label>Projects</label>
-  <textarea id="projects"
-    placeholder="Project Name – Description"></textarea>
+    <label>Projects</label>
+    <textarea id="projects"
+      placeholder="Project Name – Description"></textarea>
 
-  <label>Education</label>
-  <textarea id="education"></textarea>
+    <label>Education</label>
+    <textarea id="education"></textarea>
 
-  <label>Certifications</label>
-  <textarea id="certifications"></textarea>
+    <label>Certifications</label>
+    <textarea id="certifications"></textarea>
 
-  <button onclick="saveResume()">Preview Resume</button>
-  <button onclick="clearResume()">Clear Resume</button>
-</div>
-
-
+    <button onclick="saveResume()">Preview Resume</button>
+    <button onclick="clearResume()">Clear Resume</button>
   </div>
-  
 
+  <!-- RIGHT PANEL -->
   <iframe 
-  id="resumePreview"
-  src="../resumes/ats-resume.html"
-  class="preview">
-</iframe>
+    id="resumePreview"
+    src="../resumes/ats-resume.html"
+    class="preview">
+  </iframe>
 
 </div>
 
 <script src="../assets/js/form.js"></script>
 </body>
 </html>
-
