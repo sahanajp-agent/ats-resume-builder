@@ -14,4 +14,18 @@ function saveResume() {
   alert("Resume data saved & preview updated!");
 
 }
+function clearResume() {
+  // Remove saved resume
+  localStorage.removeItem("resumeData");
+
+  // Clear form inputs
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("phone").value = "";
+  document.getElementById("summary").value = "";
+
+  // Reload preview
+  const iframe = document.getElementById("resumePreview");
+  iframe.src = iframe.src;
+}
 
