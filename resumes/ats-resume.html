@@ -7,13 +7,48 @@
 </head>
 <body>
 
-<div class="resume">
-  <h1 id="r-name">Your Name</h1>
+<div class="resume" id="resumeContent">
+
+  <h1 id="r-name"></h1>
   <p id="r-contact"></p>
 
-  <h2>SUMMARY</h2>
-  <p id="r-summary"></p>
+  <section>
+    <h2>SUMMARY</h2>
+    <p id="r-summary"></p>
+  </section>
+
+  <section>
+    <h2>SKILLS</h2>
+    <p id="r-skills"></p>
+  </section>
+
+  <section>
+    <h2>WORK EXPERIENCE</h2>
+    <pre id="r-experience"></pre>
+  </section>
+
+  <section>
+    <h2>PROJECTS</h2>
+    <pre id="r-projects"></pre>
+  </section>
+
+  <section>
+    <h2>EDUCATION</h2>
+    <p id="r-education"></p>
+  </section>
+
+  <section>
+    <h2>CERTIFICATIONS</h2>
+    <p id="r-certifications"></p>
+  </section>
+
 </div>
+
+<div class="actions">
+  <button onclick="goToEdit()">✏️ Edit</button>
+  <button onclick="downloadPDF()">⬇️ Download PDF</button>
+</div>
+
 
 <script src="../assets/js/preview.js"></script>
 </body>
