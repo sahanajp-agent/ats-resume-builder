@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Form</title>
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <link rel="stylesheet" href="../assets/css/form.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="form-panel">
+    <h2>Resume Content</h2>
+
+    <label>Full Name</label>
+    <input id="name" placeholder="Sahana J P">
+
+    <label>Email</label>
+    <input id="email" placeholder="email@example.com">
+
+    <label>Phone</label>
+    <input id="phone" placeholder="+91 XXXXXXXX">
+
+    <label>Summary</label>
+    <textarea id="summary"></textarea>
+
+    <button onclick="saveResume()">Preview Resume</button>
+  </div>
+
+  <iframe src="../resumes/ats-resume.html" class="preview"></iframe>
+</div>
+
+<script src="../assets/js/form.js"></script>
+</body>
+</html>
 
