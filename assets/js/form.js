@@ -1,27 +1,14 @@
-// Read section from URL (for section-wise edit)
-const params = new URLSearchParams(window.location.search);
-const activeSection = params.get("section");
-
 // Load existing resume data into form on page load
 window.onload = () => {
   const data = JSON.parse(localStorage.getItem("resumeData")) || {};
 
-  // Prefill inputs
+  // Prefill all fields
   Object.keys(data).forEach(key => {
     const field = document.getElementById(key);
     if (field) {
       field.value = data[key];
     }
   });
-
-  // Focus and scroll to the section user wants to edit
-  if (activeSection) {
-    const targetField = document.getElementById(activeSection);
-    if (targetField) {
-      targetField.focus();
-      targetField.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
-  }
 };
 
 // Save resume and refresh preview
@@ -40,7 +27,7 @@ function saveResume() {
 
   localStorage.setItem("resumeData", JSON.stringify(resumeData));
 
-  // Refresh iframe preview safely
+  // Refresh iframe preview
   const iframe = document.getElementById("resumePreview");
   if (iframe) {
     iframe.src = iframe.src;
@@ -51,4 +38,16 @@ function saveResume() {
 function clearResume() {
   localStorage.removeItem("resumeData");
   location.reload();
+}
+
+// 🔥 LEFT-SIDE SECTION EDIT LOGIC (NO NAVIGATION)
+function editLeftSection(sectionId) {
+  const field = document.getElementById(sectionId);
+  if (!field) return;
+
+  field.focus();
+  field.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
 }
