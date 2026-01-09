@@ -28,4 +28,9 @@ button {
   width: 65%;
   border: none;
 }
+.clear-btn {
+  margin-top: 10px;
+  background: #ccc;
+  color: #000;
+}
 
