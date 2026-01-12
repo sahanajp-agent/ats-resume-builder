@@ -23,26 +23,27 @@
     <label>Phone</label>
     <input id="phone">
 
-    <label>Summary</label>
+    <label>Summary <button type="button" onclick="editLeftSection('summary')">Edit</button></label>
     <textarea id="summary"></textarea>
-
-    <label>Skills (comma separated)</label>
+   
+    <label>Skills (comma separated)<button type="button" onclick="editLeftSection('Skills')">Edit</button></label>
     <textarea id="skills"></textarea>
+    
 
-    <label>Work Experience</label>
+    <label>Work Experience <button type="button" onclick="editLeftSection('Experience')">Edit</button></label>
     <textarea id="experience"
       placeholder="Job Title – Company
 • Responsibility 1
 • Responsibility 2"></textarea>
 
-    <label>Projects</label>
+    <label>Projects<button type="button" onclick="editLeftSection('Projects')">Edit</button></label>
     <textarea id="projects"
       placeholder="Project Name – Description"></textarea>
 
-    <label>Education</label>
+    <label>Education <button type="button" onclick="editLeftSection('Education')">Edit</button></label>
     <textarea id="education"></textarea>
 
-    <label>Certifications</label>
+    <label>Certifications<button type="button" onclick="editLeftSection('certification')">Edit</button></label>
     <textarea id="certifications"></textarea>
 
     <button onclick="saveResume()">Preview Resume</button>
