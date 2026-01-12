@@ -8,3 +8,14 @@ window.onload = () => {
     }
   });
 };
+function editLeftSection(sectionId) {
+  const field = document.getElementById(sectionId);
+  if (!field) return;
+
+  field.focus();
+  field.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+}
+
