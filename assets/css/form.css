@@ -60,21 +60,20 @@ button {
   margin-bottom: 4px;
 }
 
-/* Icon-only edit button (NO box, NO width, NO radius) */
+/* Icon-only edit button (NO width, NO background) */
 .edit-btn {
-  all: unset;            /* removes button defaults */
+  all: unset;              /* removes input/button styles */
   cursor: pointer;
   line-height: 1;
 }
 
-/* Icon size */
+/* Pen icon size */
 .edit-btn i {
   font-size: 13px;
-  color: #555;
+  color: #666;
 }
 
-/* Hover effect (optional but nice) */
+/* Hover feedback */
 .edit-btn:hover i {
   color: #000;
 }
-
