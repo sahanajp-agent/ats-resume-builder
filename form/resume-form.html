@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Resume Form</title>
+
   <link rel="stylesheet" href="../assets/css/global.css">
   <link rel="stylesheet" href="../assets/css/form.css">
+
+  <!-- Font Awesome -->
   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 </head>
 <body>
 
@@ -18,68 +21,164 @@
   <div class="form-panel">
     <h2>Resume Content</h2>
 
+    <!-- FULL NAME -->
     <div class="form-section">
-  <div class="section-header">
-    <label>Summary</label>
-    <button
-      type="button"
-      class="edit-btn"
-      onclick="editLeftSection('summary')"
-      title="Edit Summary"
-    >
-      <i class="fa-solid fa-pen-to-square"></i>
-    </button>
-  </div>
+      <div class="section-header">
+        <label>Full Name</label>
+        <button
+          type="button"
+          class="edit-btn"
+          onclick="editLeftSection('name')"
+          title="Edit Full Name"
+        >
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+      </div>
+      <input id="name">
+    </div>
 
-  <textarea id="summary"></textarea>
-</div>
+    <!-- EMAIL -->
+    <div class="form-section">
+      <div class="section-header">
+        <label>Email</label>
+        <button
+          type="button"
+          class="edit-btn"
+          onclick="editLeftSection('email')"
+          title="Edit Email"
+        >
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+      </div>
+      <input id="email">
+    </div>
 
-    <label>Full Name</label>
-    <input id="name">
+    <!-- PHONE -->
+    <div class="form-section">
+      <div class="section-header">
+        <label>Phone</label>
+        <button
+          type="button"
+          class="edit-btn"
+          onclick="editLeftSection('phone')"
+          title="Edit Phone"
+        >
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+      </div>
+      <input id="phone">
+    </div>
 
-    <label>Email</label>
-     <button type="button" class="edit-btn" onclick="editLeftSection('email')"><i class="fa-solid fa-pen-to-square"></i></button>
-    <input id="email">
+    <!-- SUMMARY -->
+    <div class="form-section">
+      <div class="section-header">
+        <label>Summary</label>
+        <button
+          type="button"
+          class="edit-btn"
+          onclick="editLeftSection('summary')"
+          title="Edit Summary"
+        >
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+      </div>
+      <textarea id="summary"></textarea>
+    </div>
 
-    <label>Phone</label>
-    <button type="button" class="edit-btn" onclick="editLeftSection('phone')"><i class="fa-solid fa-pen-to-square"></i></button>
-    <input id="phone">
+    <!-- SKILLS -->
+    <div class="form-section">
+      <div class="section-header">
+        <label>Skills (comma separated)</label>
+        <button
+          type="button"
+          class="edit-btn"
+          onclick="editLeftSection('skills')"
+          title="Edit Skills"
+        >
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+      </div>
+      <textarea id="skills"></textarea>
+    </div>
 
-    <label>Summary </label>
-    <button type="button" class="edit-btn" onclick="editLeftSection('summary')"><i class="fa-solid fa-pen-to-square"></i></button>
-    <textarea id="summary"></textarea>
-   
-    <label>Skills (comma separated)</label>
-    <button type="button" class="edit-btn" onclick="editLeftSection('skills')"><i class="fa-solid fa-pen-to-square"></i></button>
-    <textarea id="skills"></textarea>
-    
-
-    <label>Work Experience </label>
-     <button type="button" class="edit-btn" onclick="editLeftSection('experience')"> <i class="fa-solid fa-pen-to-square"></i></button>
-    <textarea id="experience"
-      placeholder="Job Title – Company
+    <!-- WORK EXPERIENCE -->
+    <div class="form-section">
+      <div class="section-header">
+        <label>Work Experience</label>
+        <button
+          type="button"
+          class="edit-btn"
+          onclick="editLeftSection('experience')"
+          title="Edit Work Experience"
+        >
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+      </div>
+      <textarea
+        id="experience"
+        placeholder="Job Title – Company
 • Responsibility 1
-• Responsibility 2"></textarea>
+• Responsibility 2"
+      ></textarea>
+    </div>
 
-    <label>Projects</label>
-     <button type="button" class="edit-btn" onclick="editLeftSection('projects')"> <i class="fa-solid fa-pen-to-square"></i></button>
-    <textarea id="projects"
-      placeholder="Project Name – Description"></textarea>
+    <!-- PROJECTS -->
+    <div class="form-section">
+      <div class="section-header">
+        <label>Projects</label>
+        <button
+          type="button"
+          class="edit-btn"
+          onclick="editLeftSection('projects')"
+          title="Edit Projects"
+        >
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+      </div>
+      <textarea
+        id="projects"
+        placeholder="Project Name – Description"
+      ></textarea>
+    </div>
 
-    <label>Education</label>
-     <button type="button" class="edit-btn" onclick="editLeftSection('education')"><i class="fa-solid fa-pen-to-square"></i></button>
-    <textarea id="education"></textarea>
+    <!-- EDUCATION -->
+    <div class="form-section">
+      <div class="section-header">
+        <label>Education</label>
+        <button
+          type="button"
+          class="edit-btn"
+          onclick="editLeftSection('education')"
+          title="Edit Education"
+        >
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+      </div>
+      <textarea id="education"></textarea>
+    </div>
 
-    <label>Certifications</label>
-     <button type="button" class="edit-btn" onclick="editLeftSection('certifications')"><i class="fa-solid fa-pen-to-square"></i></button>
-    <textarea id="certifications"></textarea>
+    <!-- CERTIFICATIONS -->
+    <div class="form-section">
+      <div class="section-header">
+        <label>Certifications</label>
+        <button
+          type="button"
+          class="edit-btn"
+          onclick="editLeftSection('certifications')"
+          title="Edit Certifications"
+        >
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+      </div>
+      <textarea id="certifications"></textarea>
+    </div>
 
-   
-    <button onclick="clearResume()">Clear Resume</button>
+    <!-- CLEAR -->
+    <button class="clear-btn" onclick="clearResume()">Clear Resume</button>
   </div>
 
   <!-- RIGHT PANEL -->
-  <iframe 
+  <iframe
     id="resumePreview"
     src="../resumes/ats-resume.html"
     class="preview">
