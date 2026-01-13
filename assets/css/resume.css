@@ -57,3 +57,8 @@ p {
   margin-top: 4px;
   margin-bottom: 20px;
 }
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
