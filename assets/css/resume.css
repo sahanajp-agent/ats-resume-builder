@@ -46,9 +46,10 @@ p {
   margin-bottom: 4px;
 }
 
+/* Email + phone centered below name */
 .contact {
   text-align: center;
   font-size: 12px;
-  margin-bottom: 18px;
+  margin-top: 4px;
+  margin-bottom: 20px;
 }
-
