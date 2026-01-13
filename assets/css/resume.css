@@ -20,4 +20,23 @@ h2 {
 p {
   font-size: 12px;
 }
+/* ===== PRINT / PDF CLEANUP ===== */
+@media print {
+
+  /* Hide action buttons */
+  .actions {
+    display: none !important;
+  }
+
+  /* Hide page title (browser injected) */
+  title {
+    display: none;
+  }
+
+  /* Remove margins added by browser */
+  body {
+    margin: 0;
+  }
+
+}
 
