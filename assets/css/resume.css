@@ -39,4 +39,16 @@ p {
   }
 
 }
+.resume-name {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.contact {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 18px;
+}
 
