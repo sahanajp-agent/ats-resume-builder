@@ -38,6 +38,12 @@ p {
     margin: 0;
   }
 
+  .edit-btn {
+    display: none !important;
+  }
+}
+
+
 }
 .resume-name {
   text-align: center;
