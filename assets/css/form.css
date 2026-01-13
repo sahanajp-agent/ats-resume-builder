@@ -52,6 +52,7 @@ button {
 }
 
 /* Header row (label + edit) */
+/* Header row: label + icon */
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -59,4 +60,21 @@ button {
   margin-bottom: 4px;
 }
 
+/* Icon-only edit button (NO box, NO width, NO radius) */
+.edit-btn {
+  all: unset;            /* removes button defaults */
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Icon size */
+.edit-btn i {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Hover effect (optional but nice) */
+.edit-btn:hover i {
+  color: #000;
+}
 
