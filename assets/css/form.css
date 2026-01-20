@@ -77,3 +77,66 @@ button {
 .edit-btn:hover i {
   color: #000;
 }
+/* ATS SCORE CARD (FORM SIDE) */
+.ats-score-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 15px 0 25px;
+}
+
+.circle-wrap {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+circle {
+  fill: none;
+  stroke-width: 10;
+}
+
+circle.bg {
+  stroke: #e6e6e6;
+}
+
+circle.progress {
+  stroke: #2ecc71;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-dasharray: 326;
+  stroke-dashoffset: 326;
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.score-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.score-text span {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.score-text small {
+  font-size: 11px;
+  color: #2ecc71;
+}
+
+.resume-strength {
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Hide in PDF */
+@media print {
+  .ats-score-card {
+    display: none !important;
+  }
+}
