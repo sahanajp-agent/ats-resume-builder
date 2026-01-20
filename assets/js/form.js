@@ -49,6 +49,11 @@ function saveLive() {
   };
 
   localStorage.setItem("resumeData", JSON.stringify(resumeData));
+
+   // 🔹 ATS SCORE CALCULATION (ADD HERE)
+  const result = calculateATSScore(resumeData);
+  updateATSCircle(result.score);
+
   // Refresh preview iframe silently
   const iframe = document.getElementById("resumePreview");
   if (iframe) iframe.src = iframe.src;
@@ -93,4 +98,25 @@ function updateATSCircle(score) {
     label.innerText = "POOR";
     circle.style.stroke = "#e74c3c";
   }
+}
+function calculateATSScore(data) {
+  let score = 0;
+
+  // Basic info
+  if (data.name && data.email && data.phone) score += 20;
+  if (data.summary) score += 20;
+
+  // Skills
+  if (data.skills && data.skills.split(",").length >= 5) score += 20;
+
+  // Experience
+  if (data.experience && data.experience.length >= 100) score += 20;
+
+  // Education
+  if (data.education) score += 10;
+
+  // Certifications
+  if (data.certifications) score += 10;
+
+  return { score };
 }
