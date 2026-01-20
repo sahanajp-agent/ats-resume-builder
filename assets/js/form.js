@@ -68,3 +68,29 @@ function editLeftSection(sectionId) {
   field.focus();
   field.scrollIntoView({ behavior: "smooth", block: "center" });
 }
+function updateATSCircle(score) {
+  const circle = document.querySelector(".progress");
+  const scoreText = document.getElementById("atsScore");
+  const label = document.getElementById("atsLabel");
+
+  if (!circle || !scoreText || !label) return;
+
+  const radius = 52;
+  const circumference = 2 * Math.PI * radius;
+
+  const offset = circumference - (score / 100) * circumference;
+  circle.style.strokeDashoffset = offset;
+
+  scoreText.innerText = score;
+
+  if (score >= 80) {
+    label.innerText = "GOOD";
+    circle.style.stroke = "#2ecc71";
+  } else if (score >= 50) {
+    label.innerText = "AVERAGE";
+    circle.style.stroke = "#f1c40f";
+  } else {
+    label.innerText = "POOR";
+    circle.style.stroke = "#e74c3c";
+  }
+}
